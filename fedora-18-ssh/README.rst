@@ -15,19 +15,19 @@ HOW TO BUILD
 ------------
 
 - Execute:
-```shell
-docker build --rm -t /helber/fedora18-ssh-supervisor .
-```
+.. code-block:: shell
+    docker build --rm -t /helber/fedora18-ssh-supervisor .
         + rm - Remove intermediate containers
         + t - Build tag
+
 
 HOW TO RUN
 ----------
 
 - Execute:
-```shell
+.. code-block:: shell
 docker run -d -p 22 /helber/fedora18-ssh-supervisor
-```
+
         + d - Run as daemon
         + p - Expose port
 
@@ -35,23 +35,23 @@ CHECK DOCKER STATUS
 -------------------
 
 - Execute:
-```shell
+.. code-block:: shell
 docker ps
-```
+
         + It will list running container and provide container ID
 
 CHECK CONTAINER IP
 ------------------
 
 - Execute:
-```shell
+.. code-block:: shell
 docker inspect <Container_ID> | grep IP
-```
+
 
 TEST SSH SERVICE
 ----------------
 - Execute:
-```shell
+.. code-block:: shell
 ssh root@<container_IP>
-```
+
         + default root passwd is password for This image
