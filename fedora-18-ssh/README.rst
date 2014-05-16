@@ -14,30 +14,44 @@ Fedora docker file for ssh service which managed by supervisor
 HOW TO BUILD
 ------------
 
-- Execute: docker build --rm -t /helber/fedora18-ssh-supervisor
+- Execute:
+```shell
+docker build --rm -t /helber/fedora18-ssh-supervisor .
+```
         + rm - Remove intermediate containers
         + t - Build tag
 
 HOW TO RUN
 ----------
 
-- Execute: docker run -d -p 22 /helber/fedora18-ssh-supervisor
+- Execute:
+```shell
+docker run -d -p 22 /helber/fedora18-ssh-supervisor
+```
         + d - Run as daemon
         + p - Expose port
 
 CHECK DOCKER STATUS
 -------------------
 
-- Execute: docker ps
+- Execute:
+```shell
+docker ps
+```
         + It will list running container and provide container ID
 
 CHECK CONTAINER IP
 ------------------
 
-- Execute: docker inspect <Container_ID> | grep IP
+- Execute:
+```shell
+docker inspect <Container_ID> | grep IP
+```
 
 TEST SSH SERVICE
 ----------------
-- Execute: ssh root@<container_IP>
+- Execute:
+```shell
+ssh root@<container_IP>
+```
         + default root passwd is password for This image
-
