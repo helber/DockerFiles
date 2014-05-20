@@ -16,7 +16,7 @@ HOW TO BUILD
 
 - Execute:
 
-    docker build --rm -t /helber/fedora18-ssh-supervisor .
+    docker build --rm -t helber/fedora18-ssh-supervisor .
         + rm - Remove intermediate containers
         + t - Build tag
 
@@ -26,7 +26,7 @@ HOW TO RUN
 
 - Execute:
 
-    docker run -d -p 22 /helber/fedora18-ssh-supervisor
+    docker run -d -p 22 helber/fedora18-ssh-supervisor
 
         + d - Run as daemon
         + p - Expose port
